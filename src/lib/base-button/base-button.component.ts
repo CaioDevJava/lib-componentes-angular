@@ -1,2 +1,19 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core'; import type { BaseVariant } from '../types.js';
-@Component({selector:'base-button',standalone:true,changeDetection:ChangeDetectionStrategy.OnPush,templateUrl:'./base-button.component.html',styleUrl:'./base-button.component.scss'}) export class BaseButton { @Input() variant:BaseVariant='primary'; @Input() disabled=false; @Input() loading=false; @Input() loadingText='Carregando…'; @Input() type:'button'|'submit'|'reset'='button'; @Output() baseClick=new EventEmitter<MouseEvent>(); }
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import type { BaseVariant } from '../types.js';
+
+@Component({
+  selector: 'base-button',
+  standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  templateUrl: './base-button.component.html',
+  styleUrl: './base-button.component.scss'
+})
+export class BaseButton {
+  @Input() label = '';
+  @Input() variant: BaseVariant = 'primary';
+  @Input() disabled = false;
+  @Input() loading = false;
+  @Input() loadingText = 'Carregando…';
+  @Input() type: 'button' | 'submit' | 'reset' = 'button';
+  @Output() baseClick = new EventEmitter<MouseEvent>();
+}

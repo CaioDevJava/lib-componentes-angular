@@ -7,20 +7,76 @@
 }
 
 .base-toast {
-  background: var(--base-text);
-  color: var(--base-bg);
-  padding: 0.875rem 1.25rem;
+  background: var(--base-bg);
+  color: var(--base-text);
+  padding: 1rem 1.25rem;
   border-radius: var(--base-radius);
   box-shadow: var(--base-shadow-lg);
   font-size: 0.925rem;
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
   animation: slideIn 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  border-left: 4px solid var(--base-primary);
+  border: 1px solid var(--base-border);
+  min-width: 20rem;
+  position: relative;
+  overflow: hidden;
+
+  &--success {
+    border-left: 4px solid var(--base-success);
+    .base-toast-progress { background: var(--base-success); }
+  }
+  &--error {
+    border-left: 4px solid var(--base-danger);
+    .base-toast-progress { background: var(--base-danger); }
+  }
+  &--warning {
+    border-left: 4px solid var(--base-warning);
+    .base-toast-progress { background: var(--base-warning); }
+  }
+  &--info {
+    border-left: 4px solid var(--base-primary);
+    .base-toast-progress { background: var(--base-primary); }
+  }
+
+  .base-toast-content {
+    flex: 1;
+    font-weight: 500;
+  }
+
+  .base-toast-close {
+    background: transparent;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: var(--base-text-muted);
+    padding: 0;
+    line-height: 1;
+    transition: var(--base-transition);
+
+    &:hover {
+      color: var(--base-text);
+    }
+  }
+
+  .base-toast-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    opacity: 0.8;
+    width: 100%;
+    animation: shrink linear forwards;
+  }
 }
 
 @keyframes slideIn {
   from { opacity: 0; transform: translateY(1rem); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shrink {
+  from { width: 100%; }
+  to { width: 0%; }
 }

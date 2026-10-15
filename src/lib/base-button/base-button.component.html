@@ -1,1 +1,13 @@
-<button [class]="'base-button base-button--' + variant" [disabled]="disabled || loading" [attr.type]="type" (click)="baseClick.emit($event)">@if (loading) { {{ loadingText }} } @else { <ng-content /> }</button>
+<button 
+  [class]="'base-button base-button--' + variant" 
+  [disabled]="disabled || loading" 
+  [attr.type]="type" 
+  (click)="baseClick.emit($event)">
+  @if (loading) {
+    {{ loadingText }}
+  } @else if (label) {
+    {{ label }}
+  } @else {
+    <ng-content />
+  }
+</button>
