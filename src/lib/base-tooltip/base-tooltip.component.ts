@@ -1,0 +1,1 @@
+import{ChangeDetectionStrategy,Component,Input}from'@angular/core';@Component({selector:'base-tooltip',standalone:true,changeDetection:ChangeDetectionStrategy.OnPush,templateUrl:'./base-tooltip.component.html',styleUrl:'./base-tooltip.component.scss'})export class BaseTooltip{@Input()content='';@Input()id='base-tooltip';}

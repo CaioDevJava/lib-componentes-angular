@@ -1,0 +1,1 @@
+import{ChangeDetectionStrategy,Component,Input}from'@angular/core';import type{ToastVariant}from'../types.js';@Component({selector:'base-toast',standalone:true,changeDetection:ChangeDetectionStrategy.OnPush,templateUrl:'./base-toast.component.html',styleUrl:'./base-toast.component.scss'})export class BaseToast{@Input()variant:ToastVariant='info';}

@@ -1,0 +1,43 @@
+:host {
+  position: relative;
+  display: inline-block;
+}
+
+.base-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  background: var(--base-bg);
+  border: 1px solid var(--base-border);
+  border-radius: var(--base-radius);
+  box-shadow: var(--base-shadow-md);
+  min-width: 12rem;
+  padding: 0.5rem;
+  z-index: 50;
+  animation: fadeIn 0.15s ease-out;
+
+  button, a {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    background: transparent;
+    border: 0;
+    border-radius: var(--base-radius-sm);
+    color: var(--base-text);
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: var(--base-transition);
+
+    &:hover {
+      background-color: var(--base-secondary);
+      color: var(--base-primary);
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}

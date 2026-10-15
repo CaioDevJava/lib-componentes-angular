@@ -1,0 +1,22 @@
+:host {
+  display: inline-block;
+}
+
+label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.95rem;
+  user-select: none;
+  color: var(--base-text);
+
+  input[type="checkbox"] {
+    accent-color: var(--base-primary);
+    width: 1.125rem;
+    height: 1.125rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+}

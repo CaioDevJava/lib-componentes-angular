@@ -1,0 +1,1 @@
+<table><thead><tr>@for(column of columns;track key(column)){<th>{{label(column)}}</th>}</tr></thead><tbody>@for(row of records;track $index){<tr>@for(column of columns;track key(column)){<td>{{row[typeof column === 'string' ? column : column.key]}}</td>}</tr>}@if(!records.length){<tr><td [attr.colspan]="columns.length">{{emptyText}}</td></tr>}</tbody></table>

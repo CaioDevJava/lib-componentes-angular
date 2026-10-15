@@ -1,0 +1,1 @@
+import type{Meta,StoryObj}from'@storybook/angular';import{BaseLink}from'./base-link.component';const meta:Meta<BaseLink>={title:'Components/BaseLink',component:BaseLink,tags:['autodocs']};export default meta;export const Default:StoryObj<BaseLink>={args:{href:'/destino'}};

@@ -1,0 +1,39 @@
+:host {
+  display: block;
+  overflow: auto;
+  border: 1px solid var(--base-border);
+  border-radius: var(--base-radius);
+  box-shadow: var(--base-shadow-sm);
+  background: var(--base-bg);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.925rem;
+  text-align: left;
+}
+
+th, td {
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid var(--base-secondary);
+}
+
+th {
+  background: var(--base-surface);
+  font-weight: 600;
+  color: var(--base-text);
+  border-bottom: 1px solid var(--base-border);
+}
+
+tbody tr {
+  transition: var(--base-transition);
+
+  &:hover {
+    background-color: var(--base-surface);
+  }
+
+  &:last-child td {
+    border-bottom: none;
+  }
+}

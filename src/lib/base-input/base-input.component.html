@@ -1,0 +1,1 @@
+<label [attr.for]="id"><span>{{label}}</span><input [id]="id" [type]="type" [value]="value" [placeholder]="placeholder" [disabled]="disabled" [required]="required" (input)="baseInput.emit($any($event.target).value)" /></label>

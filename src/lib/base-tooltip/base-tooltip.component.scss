@@ -1,0 +1,20 @@
+:host {
+  position: relative;
+  display: inline-block;
+}
+
+.base-tooltip {
+  position: absolute;
+  bottom: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--base-text);
+  color: var(--base-bg);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--base-radius-sm);
+  font-size: 0.8rem;
+  white-space: nowrap;
+  box-shadow: var(--base-shadow);
+  z-index: 60;
+  pointer-events: none;
+}

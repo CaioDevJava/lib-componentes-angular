@@ -1,0 +1,1 @@
+import type{Meta,StoryObj}from'@storybook/angular';import{BaseTooltip}from'./base-tooltip.component';const meta:Meta<BaseTooltip>={title:'Components/BaseTooltip',component:BaseTooltip,tags:['autodocs']};export default meta;export const Default:StoryObj<BaseTooltip>={args:{content:'Informação'}};

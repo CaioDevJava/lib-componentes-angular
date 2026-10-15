@@ -1,0 +1,1 @@
+import type{Meta,StoryObj}from'@storybook/angular';import{BaseInput}from'./base-input.component';const meta:Meta<BaseInput>={title:'Components/BaseInput',component:BaseInput,tags:['autodocs']};export default meta;export const Default:StoryObj<BaseInput>={args:{label:'Nome',placeholder:'Digite seu nome'}};

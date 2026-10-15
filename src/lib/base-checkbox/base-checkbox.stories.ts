@@ -1,0 +1,1 @@
+import type{Meta,StoryObj}from'@storybook/angular';import{BaseCheckbox}from'./base-checkbox.component';const meta:Meta<BaseCheckbox>={title:'Components/BaseCheckbox',component:BaseCheckbox,tags:['autodocs']};export default meta;export const Default:StoryObj<BaseCheckbox>={args:{label:'Aceito os termos'}};

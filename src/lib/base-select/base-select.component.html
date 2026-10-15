@@ -1,0 +1,1 @@
+<label [attr.for]="id"><span>{{label}}</span><select [id]="id" [value]="value" [disabled]="disabled" (change)="baseChange.emit($any($event.target).value)">@for (option of options; track option.value) { <option [value]="option.value" [disabled]="option.disabled">{{option.label}}</option> }</select></label>

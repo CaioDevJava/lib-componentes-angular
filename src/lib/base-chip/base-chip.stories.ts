@@ -1,0 +1,1 @@
+import type{Meta,StoryObj}from'@storybook/angular';import{BaseChip}from'./base-chip.component';const meta:Meta<BaseChip>={title:'Components/BaseChip',component:BaseChip,tags:['autodocs']};export default meta;export const Removable:StoryObj<BaseChip>={args:{removable:true}};

@@ -1,0 +1,46 @@
+:root {
+  --base-font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --base-primary: #4f46e5;
+  --base-primary-hover: #4338ca;
+  --base-primary-light: #e0e7ff;
+  --base-secondary: #f1f5f9;
+  --base-secondary-hover: #e2e8f0;
+  --base-success: #10b981;
+  --base-warning: #f59e0b;
+  --base-danger: #ef4444;
+  --base-danger-hover: #dc2626;
+  --base-bg: #ffffff;
+  --base-surface: #f8fafc;
+  --base-border: #cbd5e1;
+  --base-border-focus: #4f46e5;
+  --base-text: #0f172a;
+  --base-text-muted: #64748b;
+  --base-radius: 0.75rem;
+  --base-radius-sm: 0.5rem;
+  --base-radius-full: 9999px;
+  --base-shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+  --base-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.1), 0 2px 4px -2px rgba(15, 23, 42, 0.1);
+  --base-shadow-md: 0 10px 15px -3px rgba(15, 23, 42, 0.1), 0 4px 6px -4px rgba(15, 23, 42, 0.1);
+  --base-shadow-lg: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.1);
+  --base-ring: 0 0 0 3px rgba(79, 70, 229, 0.25);
+  --base-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  font-family: var(--base-font-sans);
+  color: var(--base-text);
+  background-color: var(--base-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+@use './lib/base-button/base-button.component.scss';
+@use './lib/base-input/base-input.component.scss';
+@use './lib/base-select/base-select.component.scss';
+@use './lib/base-modal/base-modal.component.scss';
+@use './lib/base-table/base-table.component.scss';
+@use './lib/base-checkbox/base-checkbox.component.scss';
+@use './lib/base-chip/base-chip.component.scss';
+@use './lib/base-dropdown/base-dropdown.component.scss';
+@use './lib/base-toast/base-toast.component.scss';
+@use './lib/base-tooltip/base-tooltip.component.scss';
+@use './lib/base-link/base-link.component.scss';

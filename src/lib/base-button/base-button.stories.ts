@@ -1,0 +1,1 @@
+import type { Meta,StoryObj } from '@storybook/angular'; import { BaseButton } from './base-button.component'; const meta:Meta<BaseButton>={title:'Components/BaseButton',component:BaseButton,tags:['autodocs']}; export default meta; export const Primary:StoryObj<BaseButton>={args:{variant:'primary'}};

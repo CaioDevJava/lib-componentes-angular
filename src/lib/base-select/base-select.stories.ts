@@ -1,0 +1,1 @@
+import type{Meta,StoryObj}from'@storybook/angular';import{BaseSelect}from'./base-select.component';const meta:Meta<BaseSelect>={title:'Components/BaseSelect',component:BaseSelect,tags:['autodocs']};export default meta;export const Options:StoryObj<BaseSelect>={args:{label:'Status',options:[{value:'active',label:'Ativo'},{value:'inactive',label:'Inativo'}]}};

@@ -1,0 +1,1 @@
+import{ChangeDetectionStrategy,Component,Input}from'@angular/core';@Component({selector:'base-icon',standalone:true,changeDetection:ChangeDetectionStrategy.OnPush,templateUrl:'./base-icon.component.html'})export class BaseIcon{@Input()name:'check'|'close'|'circle'='circle';@Input()label='';get symbol():string{return this.name==='check'?'✓':this.name==='close'?'×':'●';}}

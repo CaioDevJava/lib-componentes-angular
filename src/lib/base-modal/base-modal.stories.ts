@@ -1,0 +1,1 @@
+import type{Meta,StoryObj}from'@storybook/angular';import{BaseModal}from'./base-modal.component';const meta:Meta<BaseModal>={title:'Components/BaseModal',component:BaseModal,tags:['autodocs']};export default meta;export const TwoActions:StoryObj<BaseModal>={args:{open:true,title:'Confirmar',description:'Deseja continuar?',primaryButton:'Confirmar',secondaryButton:'Cancelar'}};

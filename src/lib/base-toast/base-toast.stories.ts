@@ -1,0 +1,1 @@
+import type{Meta,StoryObj}from'@storybook/angular';import{BaseToast}from'./base-toast.component';const meta:Meta<BaseToast>={title:'Components/BaseToast',component:BaseToast,tags:['autodocs']};export default meta;export const Success:StoryObj<BaseToast>={args:{variant:'success'}};

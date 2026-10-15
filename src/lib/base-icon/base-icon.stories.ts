@@ -1,0 +1,1 @@
+import type{Meta,StoryObj}from'@storybook/angular';import{BaseIcon}from'./base-icon.component';const meta:Meta<BaseIcon>={title:'Components/BaseIcon',component:BaseIcon,tags:['autodocs']};export default meta;export const Check:StoryObj<BaseIcon>={args:{name:'check',label:'Concluído'}};

@@ -1,0 +1,1 @@
+import type{Meta,StoryObj}from'@storybook/angular';import{BaseDropdown}from'./base-dropdown.component';const meta:Meta<BaseDropdown>={title:'Components/BaseDropdown',component:BaseDropdown,tags:['autodocs']};export default meta;export const Default:StoryObj<BaseDropdown>={args:{label:'Opções'}};

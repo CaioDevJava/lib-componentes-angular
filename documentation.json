@@ -1,0 +1,16 @@
+{
+  "pipes": [],
+  "directives": [],
+  "injectables": [],
+  "classes": [],
+  "interfaces": [],
+  "components": [],
+  "modules": [],
+  "miscellaneous": {
+    "variables": [],
+    "functions": [],
+    "typealiases": [],
+    "enumerations": [],
+    "groups": []
+  }
+}
