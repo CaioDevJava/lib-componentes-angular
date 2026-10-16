@@ -1,0 +1,14 @@
+<label class="base-toggle-wrapper" [class.disabled]="disabled">
+  <button 
+    type="button" 
+    role="switch" 
+    [attr.aria-checked]="checked" 
+    [disabled]="disabled"
+    [class]="'base-toggle ' + (checked ? 'checked' : '')"
+    (click)="toggle()">
+    <span class="base-toggle-thumb"></span>
+  </button>
+  @if (label) {
+    <span class="base-toggle-label">{{ label }}</span>
+  }
+</label>

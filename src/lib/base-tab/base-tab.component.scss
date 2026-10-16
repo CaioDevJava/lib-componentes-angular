@@ -1,0 +1,51 @@
+:host {
+  display: block;
+}
+
+.base-tabs {
+  border: 1px solid var(--base-border);
+  border-radius: var(--base-radius);
+  background: var(--base-bg);
+  box-shadow: var(--base-shadow-sm);
+  overflow: hidden;
+
+  .base-tabs-header {
+    display: flex;
+    background: var(--base-surface);
+    border-bottom: 1px solid var(--base-border);
+    gap: 0.25rem;
+    padding: 0.5rem 0.5rem 0;
+
+    .base-tab-btn {
+      background: transparent;
+      border: none;
+      padding: 0.75rem 1.25rem;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--base-text-muted);
+      cursor: pointer;
+      border-top-left-radius: var(--base-radius-sm);
+      border-top-right-radius: var(--base-radius-sm);
+      transition: var(--base-transition);
+
+      &:hover {
+        color: var(--base-text);
+        background: rgba(0, 0, 0, 0.02);
+      }
+
+      &.active {
+        color: var(--base-primary);
+        background: var(--base-bg);
+        border-bottom: 2px solid var(--base-primary);
+        font-weight: 600;
+      }
+    }
+  }
+
+  .base-tabs-body {
+    padding: 1.25rem;
+    color: var(--base-text);
+    font-size: 0.95rem;
+  }
+}
