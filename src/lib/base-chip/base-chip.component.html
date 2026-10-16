@@ -1,0 +1,13 @@
+<span 
+  class="base-chip" 
+  [style.background-color]="backgroundColor || null" 
+  [style.color]="textColor || null"
+  [style.border-color]="backgroundColor ? 'transparent' : null">
+  @if (label) {
+    <span class="base-chip-text">{{ label }}</span>
+  }
+  <ng-content />
+  @if (removable) {
+    <button type="button" class="base-chip-close" [attr.aria-label]="removeLabel" (click)="onRemove($event)">×</button>
+  }
+</span>

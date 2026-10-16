@@ -1,0 +1,1 @@
+<label><input type="checkbox" [checked]="checked" [disabled]="disabled" [indeterminate]="indeterminate" [attr.aria-label]="label || null" (change)="baseChange.emit($any($event.target).checked)" /><ng-content />@if(label){<span>{{label}}</span>}</label>

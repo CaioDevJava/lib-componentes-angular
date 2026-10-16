@@ -1,0 +1,20 @@
+<div class="base-tabs">
+  <div class="base-tabs-header" role="tablist">
+    @for (tab of tabs; track tab.id) {
+      <button 
+        role="tab"
+        [id]="'tab-' + tab.id"
+        [attr.aria-selected]="(activeId ? activeId === tab.id : tabs[0]?.id === tab.id)"
+        [class]="'base-tab-btn ' + ((activeId ? activeId === tab.id : tabs[0]?.id === tab.id) ? 'active' : '')"
+        (click)="selectTab(tab.id)">
+        {{ tab.title }}
+      </button>
+    }
+  </div>
+  <div class="base-tabs-body" role="tabpanel">
+    @if (currentTab?.content) {
+      <p>{{ currentTab?.content }}</p>
+    }
+    <ng-content />
+  </div>
+</div>

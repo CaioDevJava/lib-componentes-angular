@@ -1,0 +1,18 @@
+<div 
+  class="base-card" 
+  [class.clickable]="clickable"
+  (click)="clickable && cardClick.emit($event)">
+  @if (imageUrl) {
+    <div class="base-card-image">
+      <img [src]="imageUrl" [alt]="title || 'Card image'" />
+    </div>
+  }
+  @if (title) {
+    <div class="base-card-header">
+      <h3>{{ title }}</h3>
+    </div>
+  }
+  <div class="base-card-body">
+    <ng-content />
+  </div>
+</div>

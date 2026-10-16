@@ -1,0 +1,52 @@
+{
+  "name": "@workspace/component-library-angular",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Reusable Angular Base components for application projects.",
+  "main": "./dist/component-library-angular/fesm2022/workspace-component-library-angular.mjs",
+  "module": "./dist/component-library-angular/fesm2022/workspace-component-library-angular.mjs",
+  "types": "./dist/component-library-angular/index.d.ts",
+  "peerDependencies": {
+    "@angular/common": "^19.0.0",
+    "@angular/core": "^19.0.0",
+    "rxjs": "^7.4.0"
+  },
+  "scripts": {
+    "build": "ng-packagr -p ng-package.json",
+    "lint": "tsc -p tsconfig.lib.json --noEmit",
+    "test": "node --test",
+    "storybook": "ng run component-library-angular:storybook",
+    "build-storybook": "ng run component-library-angular:build-storybook"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/component-library-angular/index.d.ts",
+      "import": "./dist/component-library-angular/fesm2022/workspace-component-library-angular.mjs"
+    },
+    "./styles.css": "./dist/component-library-angular/styles.css"
+  },
+  "files": [
+    "dist",
+    "src/styles.css",
+    "src/styles.scss",
+    "src/**/*.scss",
+    "src/**/*.html",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": [
+    "./dist/styles.css"
+  ],
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^19.0.0",
+    "@angular/cli": "^19.0.0",
+    "@angular/common": "^19.0.0",
+    "@angular/core": "^19.0.0",
+    "@angular/compiler-cli": "^19.0.0",
+    "@storybook/angular": "^8.0.0",
+    "@storybook/addon-essentials": "^8.0.0",
+    "ng-packagr": "^19.2.2",
+    "storybook": "^8.0.0",
+    "typescript": "^5.7.2"
+  }
+}

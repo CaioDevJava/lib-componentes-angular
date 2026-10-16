@@ -1,0 +1,26 @@
+:host {
+  display: block;
+}
+
+.base-title {
+  font-family: var(--base-font-sans);
+  margin: 0;
+  font-weight: 700;
+  color: var(--base-text);
+  letter-spacing: -0.025em;
+
+  &--default {
+    color: var(--base-text);
+  }
+
+  &--gradient {
+    background: linear-gradient(135deg, var(--base-primary) 0%, #ec4899 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &--muted {
+    color: var(--base-text-muted);
+    font-weight: 500;
+  }
+}

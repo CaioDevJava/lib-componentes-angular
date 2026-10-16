@@ -1,0 +1,25 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.base-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-cols, 3), minmax(0, 1fr));
+  gap: var(--grid-gap, 1.5rem);
+
+  > * {
+    border-radius: var(--base-radius);
+    box-shadow: var(--base-shadow-sm);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--base-shadow-lg);
+    }
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+}

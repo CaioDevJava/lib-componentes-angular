@@ -1,0 +1,16 @@
+<label [attr.for]="id">
+  <span>{{label}}</span>
+  <input 
+    [id]="id" 
+    [type]="type" 
+    [value]="value" 
+    [placeholder]="placeholder" 
+    [disabled]="disabled" 
+    [required]="required" 
+    [class]="'base-input--' + state"
+    (input)="baseInput.emit($any($event.target).value)" 
+  />
+  @if (helperText) {
+    <small class="base-helper-text" [class]="'base-helper-text--' + state">{{ helperText }}</small>
+  }
+</label>

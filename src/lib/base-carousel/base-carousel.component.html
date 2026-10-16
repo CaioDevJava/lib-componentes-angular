@@ -1,0 +1,40 @@
+<div class="base-carousel" (mouseenter)="stopAutoplay()" (mouseleave)="autoplay && startAutoplay()">
+  <div class="base-carousel-track">
+    @if (currentItem) {
+      <div 
+        class="base-carousel-slide" 
+        [class.clickable]="currentItem.linkUrl" 
+        (click)="onSlideClick(currentItem)">
+        @if (currentItem.imageUrl) {
+          <img [src]="currentItem.imageUrl" [alt]="currentItem.title || 'Carousel image'" />
+        }
+        @if (currentItem.title || currentItem.content) {
+          <div class="base-carousel-caption">
+            @if (currentItem.title) {
+              <h4>{{ currentItem.title }}</h4>
+            }
+            @if (currentItem.content) {
+              <p>{{ currentItem.content }}</p>
+            }
+          </div>
+        }
+      </div>
+    }
+    <ng-content />
+  </div>
+
+  @if (items.length > 1) {
+    <button class="base-carousel-arrow prev" (click)="prev()" aria-label="Anterior">&lsaquo;</button>
+    <button class="base-carousel-arrow next" (click)="next()" aria-label="Próximo">&rsaquo;</button>
+
+    <div class="base-carousel-indicators">
+      @for (item of items; track item.id; let i = $index) {
+        <button 
+          [class.active]="i === currentIndex" 
+          (click)="goTo(i)" 
+          [attr.aria-label]="'Slide ' + (i + 1)">
+        </button>
+      }
+    </div>
+  }
+</div>

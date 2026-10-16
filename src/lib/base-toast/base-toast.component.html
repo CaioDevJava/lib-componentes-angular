@@ -1,0 +1,12 @@
+<div class="base-toast" [class]="'base-toast base-toast--' + variant" role="status">
+  <div class="base-toast-content">
+    <span>{{ message }}</span>
+    <ng-content />
+  </div>
+  @if (dismissible) {
+    <button class="base-toast-close" (click)="closed.emit()" aria-label="Fechar">&times;</button>
+  }
+  @if (duration > 0) {
+    <div class="base-toast-progress" [style.animation-duration.ms]="duration"></div>
+  }
+</div>

@@ -1,0 +1,1 @@
+import{ChangeDetectionStrategy,Component,Input}from'@angular/core';@Component({selector:'base-link',standalone:true,changeDetection:ChangeDetectionStrategy.OnPush,templateUrl:'./base-link.component.html',styleUrl:'./base-link.component.scss'})export class BaseLink{@Input()href='#';@Input()target='_self';@Input()rel='';}

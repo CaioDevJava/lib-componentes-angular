@@ -1,0 +1,26 @@
+@if (open) {
+  <div class="base-modal-backdrop" (click)="$event.target === $event.currentTarget && close()">
+    <section class="base-modal" [class]="'base-modal--' + size" role="dialog" aria-modal="true" aria-labelledby="base-modal-title">
+      <header>
+        <h2 id="base-modal-title">{{ title }}</h2>
+        <button type="button" aria-label="Fechar" (click)="close()">×</button>
+      </header>
+      <div class="base-modal-body">
+        @if (description) {
+          <p>{{ description }}</p>
+        }
+        <ng-content />
+      </div>
+      @if (primaryButton || secondaryButton) {
+        <footer>
+          @if (secondaryButton) {
+            <button type="button" class="base-btn-secondary" (click)="eventoSecundaryButton.emit()">{{ secondaryButton }}</button>
+          }
+          @if (primaryButton) {
+            <button type="button" class="base-btn-primary" (click)="eventoPrimaryButton.emit()">{{ primaryButton }}</button>
+          }
+        </footer>
+      }
+    </section>
+  </div>
+}
