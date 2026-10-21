@@ -1,0 +1,85 @@
+<nav class="base-pagination" aria-label="Navegação de página">
+  <div class="base-pagination-info" *ngIf="totalItems > 0">
+    Mostrando 
+    <span class="base-pagination-highlight">{{ ((currentPage - 1) * pageSize) + 1 }}</span>
+    a
+    <span class="base-pagination-highlight">{{ Math.min(currentPage * pageSize, totalItems) }}</span>
+    de
+    <span class="base-pagination-highlight">{{ totalItems }}</span>
+    resultados
+  </div>
+
+  <div class="base-pagination-controls">
+    <!-- Primeira página -->
+    <button
+      type="button"
+      class="base-pagination-btn base-pagination-edge"
+      [disabled]="currentPage === 1"
+      (click)="goToPage(1)"
+      aria-label="Ir para primeira página">
+      ««
+    </button>
+
+    <!-- Página anterior -->
+    <button
+      type="button"
+      class="base-pagination-btn base-pagination-nav"
+      [disabled]="currentPage === 1"
+      (click)="goToPage(currentPage - 1)"
+      aria-label="Página anterior">
+      ‹ Anterior
+    </button>
+
+    <!-- Números das páginas -->
+    <div class="base-pagination-pages">
+      <ng-container *ngFor="let page of pages">
+        @if (page === '...') {
+          <span class="base-pagination-dots" aria-hidden="true">…</span>
+        } @else {
+          <button
+            type="button"
+            class="base-pagination-number"
+            [class.active]="page === currentPage"
+            [attr.aria-current]="page === currentPage ? 'page' : null"
+            (click)="goToPage(page)">
+            {{ page }}
+          </button>
+        }
+      </ng-container>
+    </div>
+
+    <!-- Próxima página -->
+    <button
+      type="button"
+      class="base-pagination-btn base-pagination-nav"
+      [disabled]="currentPage === totalPages || totalPages === 0"
+      (click)="goToPage(currentPage + 1)"
+      aria-label="Próxima página">
+      Próxima ›
+    </button>
+
+    <!-- Última página -->
+    <button
+      type="button"
+      class="base-pagination-btn base-pagination-edge"
+      [disabled]="currentPage === totalPages || totalPages === 0"
+      (click)="goToPage(totalPages)"
+      aria-label="Ir para última página">
+      »»
+    </button>
+  </div>
+
+  <!-- Seletor de itens por página -->
+  <div class="base-pagination-size" *ngIf="showPageSizeOptions && pageSizeOptions.length > 0">
+    <label for="base-page-size-select">Itens por página:</label>
+    <select
+      id="base-page-size-select"
+      class="base-pagination-select"
+      [value]="pageSize"
+      (change)="onPageSizeChange($event)">
+      <option *ngFor="let option of pageSizeOptions" [value]="option">
+        {{ option }}
+      </option>
+    </select>
+  </div>
+</nav>

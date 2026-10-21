@@ -1,0 +1,75 @@
+<header
+  class="base-header"
+  [class.base-header-static]="position === 'static'"
+  [class.base-header-fixed]="position === 'fixed'"
+  [class.base-header-sticky]="position === 'sticky'">
+  
+  <div class="base-header-container">
+    <!-- Brand / Logo -->
+    <div class="base-header-brand" (click)="onBrandClick()" role="button" tabindex="0">
+      @if (brandLogo) {
+        <img [src]="brandLogo" [alt]="brandTitle" class="base-header-logo" />
+      }
+      <span class="base-header-title">{{ brandTitle }}</span>
+    </div>
+
+    <!-- Navigation Links (Desktop) -->
+    <nav class="base-header-nav" aria-label="Navegação principal">
+      <ul class="base-header-list">
+        @for (item of navItems; track item.label) {
+          <li>
+            <button
+              type="button"
+              class="base-header-link"
+              [class.active]="item.active"
+              [attr.aria-current]="item.active ? 'page' : null"
+              (click)="onNavClick(item)">
+              {{ item.label }}
+            </button>
+          </li>
+        }
+      </ul>
+    </nav>
+
+    <!-- Right Actions Slot -->
+    <div class="base-header-actions">
+      <ng-content select="[actions]"></ng-content>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button
+        type="button"
+        class="base-header-hamburger"
+        [attr.aria-expanded]="mobileMenuOpen"
+        aria-label="Menu de navegação"
+        (click)="toggleMobileMenu()">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Drawer -->
+  @if (mobileMenuOpen) {
+    <div class="base-header-mobile-drawer">
+      <nav aria-label="Navegação móvel">
+        <ul class="base-header-mobile-list">
+          @for (item of navItems; track item.label) {
+            <li>
+              <button
+                type="button"
+                class="base-header-mobile-link"
+                [class.active]="item.active"
+                (click)="onNavClick(item)">
+                {{ item.label }}
+              </button>
+            </li>
+          }
+        </ul>
+      </nav>
+      <div class="base-header-mobile-actions">
+        <ng-content select="[mobile-actions]"></ng-content>
+      </div>
+    </div>
+  }
+</header>
