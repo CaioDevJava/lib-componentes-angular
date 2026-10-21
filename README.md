@@ -10,7 +10,7 @@ npm install @workspace/component-library-angular
 import { BaseButton, BaseTable } from '@workspace/component-library-angular';
 ```
 
-Inclui `BaseButton`, `BaseInput`, `BaseSelect`, `BaseDropdown`, `BaseModal`, `BaseTable`, `BaseChip`, `BaseCheckbox`, `BaseToast`, `BaseTooltip`, `BaseLink` e `BaseIcon`. Cada componente é standalone, tipado e configurável por inputs/outputs. Execute `npm run build` e `npm run lint` para validar o pacote. O Storybook em `.storybook/` documenta os exemplos e personalização por tokens CSS.
+Inclui `BaseButton`, `BaseInput`, `BaseSelect`, `BaseDropdown`, `BaseModal`, `BaseTable`, `BaseChip`, `BaseCheckbox`, `BaseToast`, `BaseTooltip`, `BaseLink`, `BaseIcon`, `BaseCard`, `BaseGrid`, `BaseCarousel`, `BaseTab`, `BaseToggle`, `BaseTitle`, `BasePagination`, `BaseSkeleton`, `BaseLoader` e `BaseHeader`. Cada componente é standalone, tipado e configurável por inputs/outputs. Execute `npm run build` e `npm run lint` para validar o pacote. O Storybook em `.storybook/` documenta os exemplos e personalização por tokens CSS.
 
 Os componentes usam templates e SCSS externos. O projeto consumidor pode sobrescrever `--base-*`, complementar classes e fornecer seus próprios estilos sem editar a biblioteca. A tabela aceita `columns` como `['nome', 'telefone', 'endereço']` ou objetos `{ key, label }`, além de `rows` e do alias compatível `dados`.
 

@@ -1,0 +1,16 @@
+<div
+  class="base-skeleton"
+  [class.base-skeleton-text]="variant === 'text'"
+  [class.base-skeleton-circle]="variant === 'circle'"
+  [class.base-skeleton-rectangle]="variant === 'rectangle'"
+  [class.base-skeleton-shimmer]="animation === 'shimmer'"
+  [class.base-skeleton-pulse]="animation === 'pulse'"
+  [class.base-skeleton-static]="animation === 'none'"
+  [style.width]="width || null"
+  [style.height]="height || null"
+  [style.border-radius]="borderRadius || null"
+  role="status"
+  [attr.aria-label]="ariaLabel"
+  aria-busy="true"
+  aria-hidden="false">
+</div>

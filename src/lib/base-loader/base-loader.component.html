@@ -1,0 +1,22 @@
+<div
+  class="base-loader-wrapper"
+  [class.base-loader-overlay]="mode === 'overlay'"
+  [class.base-loader-inline]="mode === 'inline'"
+  role="status"
+  aria-live="polite"
+  [attr.aria-label]="message || ariaLabel">
+  
+  <div class="base-loader-container">
+    <div
+      class="base-spinner"
+      [class.base-spinner-small]="size === 'small'"
+      [class.base-spinner-medium]="size === 'medium'"
+      [class.base-spinner-large]="size === 'large'"
+      [style.border-top-color]="color || null">
+    </div>
+    
+    @if (message) {
+      <span class="base-loader-message">{{ message }}</span>
+    }
+  </div>
+</div>
