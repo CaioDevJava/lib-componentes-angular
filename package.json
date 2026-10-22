@@ -13,6 +13,7 @@
   },
   "scripts": {
     "build": "ng-packagr -p ng-package.json",
+    "prepare": "npm run build",
     "lint": "tsc -p tsconfig.lib.json --noEmit",
     "test": "node --test",
     "storybook": "ng run component-library-angular:storybook",
