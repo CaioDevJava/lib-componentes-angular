@@ -1,8 +1,15 @@
 {
-  "name": "@workspace/component-library-angular",
+  "name": "@caiodevjava/component-library-angular",
   "version": "0.1.0",
   "type": "module",
   "description": "Reusable Angular Base components for application projects.",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaioDevJava/lib-componentes-angular.git"
+  },
   "main": "./dist/component-library-angular/fesm2022/workspace-component-library-angular.mjs",
   "module": "./dist/component-library-angular/fesm2022/workspace-component-library-angular.mjs",
   "types": "./dist/component-library-angular/index.d.ts",
