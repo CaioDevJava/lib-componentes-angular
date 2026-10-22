@@ -1,6 +1,6 @@
 {
   "name": "@caiodevjava/component-library-angular",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "Reusable Angular Base components for application projects.",
   "publishConfig": {
